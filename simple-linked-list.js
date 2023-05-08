@@ -81,4 +81,12 @@ export class List {
     this.hd = prev;
     return this;
   }
+
+  remove() {
+    let current = this.hd.next;
+    this.hd.val = null;
+    this.hd = current;
+
+    return this;
+  }
 }

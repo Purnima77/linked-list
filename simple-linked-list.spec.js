@@ -129,5 +129,13 @@ describe('Lists with multiple elements', () => {
       10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
     ]);
   });
+  test('can remove an element', () => {
+    const list = new List([1, 2, 3]);
+    expect(list.remove().toArray()).toEqual([2, 1]);
+  });
+  test('can reverse after removing', () => {
+    const list = new List([1, 2, 3]);
+    expect(list.remove().reverse().toArray()).toEqual([1, 2]);
+  });
 });
 
